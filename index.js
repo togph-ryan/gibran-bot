@@ -8,9 +8,6 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-//make sure this line is the last line
-client.login(process.env.CLIENT_TOKEN); //login bot using token
-
 client.on('messageCreate', msg => {
   if (msg.channel.id !== '878509130824949761' && (msg.content.includes("tangina") || msg.content.includes("fuck") || msg.content.includes("fucking") || msg.content.includes("taena") || msg.content.includes("gago") 
 	  || msg.content.includes("bobo"))) {
@@ -25,3 +22,6 @@ client.on('messageCreate', msg => {
 	channel.send(suspect);
   }
 });
+
+//make sure this line is the last line
+client.login(process.env.CLIENT_TOKEN); //login bot using token
